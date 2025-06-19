@@ -1,9 +1,20 @@
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import { useFormStore } from "@/store/formStore";
+import HomeStep from "@/components/steps/HomeStep";
+import WalkthroughStep from "@/components/steps/WalkthroughStep";
+import FormStep from "@/components/steps/FormStep";
+// import ResultStep from "@/components/steps/ResultStep";
+
+export default function HomePage() {
+  const { step } = useFormStore();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>Juicebox</main>
-    </div>
+    <main>
+      {step === 0 && <HomeStep />}
+      {step === 1 && <WalkthroughStep />}
+      {step === 2 && <FormStep />}
+      {/* {step === 3 && <ResultStep />} */}
+    </main>
   );
 }

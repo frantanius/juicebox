@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import LenisProvider from "@/components/common/LenisProvider";
+import Header from "@/components/common/Header";
+
 const bagoss = localFont({
   src: "../../public/fonts/bagoss/BagossTRIALVF.ttf",
   variable: "--font-bagoss",
@@ -25,7 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bagoss.variable} ${sohne.variable}`}>{children}</body>
+      <body className={`${bagoss.variable} ${sohne.variable}`}>
+        <LenisProvider>
+          <Header />
+          {children}
+        </LenisProvider>
+      </body>
     </html>
   );
 }

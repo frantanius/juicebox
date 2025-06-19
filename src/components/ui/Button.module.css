@@ -1,0 +1,82 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.1875rem;
+  font-family: var(--font-sohne);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Variants */
+.default {
+  background-color: var(--primary-light);
+  color: var(--dark);
+}
+
+.default:hover {
+  background-color: var(--primary);
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.outline:hover {
+  box-shadow: 0 0 0 0.15rem var(--shadow);
+}
+
+.secondary {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.secondary:hover {
+  box-shadow: 0 0 0 0.15rem var(--shadow);
+}
+
+.ghost {
+  background-color: var(--ghost-light);
+  color: var(--light);
+}
+
+.ghost:hover {
+  background-color: var(--ghost);
+}
+
+/* Sizes */
+.defaultSize {
+  height: 3.75rem; /* 60px */
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.sm {
+  height: 3rem; /* 48px */
+  padding: 0 1.125rem;
+  font-size: 0.875rem;
+}
+
+.lg {
+  height: 4.25rem; /* 68px */
+  padding: 0 1.75rem;
+  font-size: 1.125rem;
+}
+
+.icon {
+  height: 2.875rem; /* 46px */
+  width: 2.875rem;
+  padding: 0;
+  font-size: 1rem;
+  border-radius: 50%;
+}
